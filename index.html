@@ -7,12 +7,24 @@
 	</head>
 	<body>
 		<div class="container">
-			<div id="buttons">
-                <button id="play-rock">Kamień</button>
-                <button id="play-paper">Papier</button>
-                <button id="play-scissors">Nożyce</button>
+            <div class="inner">
+                <h1>Cześć! Zagraj ze mną w "kamień, papier, nożyce!"</h1>
+                <h3>Wsytarczy, że klikniesz w przycisk. Powodzenia!</h3>
+                <div id="buttons">
+                    <button id="play-rock">Kamień</button>
+                    <button id="play-paper">Papier</button>
+                    <button id="play-scissors">Nożyce</button>
+                </div>
+                <div class="results">
+                    <div class="player">Ty:
+                        <span class="result-score">0</span>
+                    </div>
+                    <div class="player">Ja:
+                        <span class="result-score">0</span>
+                    </div>
+                </div>
+                <div id="messages"></div>
             </div>
-			<div id="messages"></div>
 		</div>
 		<script src="js/functions.js"></script>
 		<script src="js/script.js"></script>

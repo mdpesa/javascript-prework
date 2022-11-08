@@ -49,20 +49,14 @@ function playGame(playerInput) {
 	function displayResult(argComputerMove, argPlayerMove) {
 		if (argComputerMove == argPlayerMove) {
 			printMessage('Mamy remis!');
-		} else if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
+		} else if (
+			(argComputerMove == 'kamień' && argPlayerMove == 'papier') ||
+			(argComputerMove == 'papier' && argPlayerMove == 'nożyce') ||
+			(argComputerMove == 'nożyce' && argPlayerMove == 'kamień')
+		) {
 			printMessage('Ty wygrywasz!');
-		} else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
+		} else {
 			printMessage('Ja wygrywam!');
-		} else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
-			printMessage('Ja wygrywam!');
-		} else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-			printMessage('Ty wygrywasz!');
-		} else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-			printMessage('Ty wygrywasz!');
-		} else if (argComputerMove == 'nożyce' && pargPlayerMove == 'papier') {
-			printMessage('Ja wygrywam!');
-		} else if (argPlayerMove == 'nieznany ruch') {
-			printMessage('Wybierz 1, 2 lub 3!');
 		}
 	}
 	displayResult(argComputerMove, argPlayerMove);
@@ -85,12 +79,12 @@ function playGame(playerInput) {
     }*/
 }
 
-document.getElementById('play-rock').addEventListener('click', function (){
+document.getElementById('play-rock').addEventListener('click', function () {
 	playGame('1');
 });
-document.getElementById('play-paper').addEventListener('click', function (){
+document.getElementById('play-paper').addEventListener('click', function () {
 	playGame('2');
 });
-document.getElementById('play-scissors').addEventListener('click', function (){
+document.getElementById('play-scissors').addEventListener('click', function () {
 	playGame('3');
 });
