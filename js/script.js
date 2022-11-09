@@ -1,6 +1,6 @@
 {
-	let playerScoreDisplay = document.getElementById('player-score');
-	let computerScoreDisplay = document.getElementById('computer-score');
+	const playerScoreDisplay = document.getElementById('player-score');
+	const computerScoreDisplay = document.getElementById('computer-score');
 	let playerScore = 0;
 	let computerScore = 0;
 	const playGame = function (playerInput) {
